@@ -277,7 +277,7 @@ impl Sign for GPGSign {
 	}
 }
 
-/// Sign commit data using `SSHSign`
+/// Sign commit data using `ssh-keygen`
 pub struct SSHSign {
 	program: String,
 	signing_key: PathBuf,
@@ -318,8 +318,6 @@ impl Sign for SSHSign {
 			.write_all(commit)
 			.map_err(|e| SignError::WriteBuffer(e.to_string()))?;
 		drop(stdin);
-
-		//hllo
 
 		let output = child
 			.wait_with_output()
@@ -471,7 +469,6 @@ mod tests {
 			sign.signing_key()
 		);
 
-		drop(temp_file);
 		Ok(())
 	}
 
