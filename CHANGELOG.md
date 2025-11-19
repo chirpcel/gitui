@@ -39,6 +39,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * When the terminal is insufficient to display all the commands, the cmdbar_bg configuration color does not fully take effect. ([#2347](https://github.com/extrawurst/gitui/issues/2347))
 * disable blame and history popup keybinds for untracked files [[@kpbaks](https://github.com/kpbaks)] ([#2489](https://github.com/gitui-org/gitui/pull/2489))
 
+### Added
+* ssh commit signing with ssh-agents [[@chirpcel](https://github.com/chirpcel)] ([#2188](https://github.com/extrawurst/gitui/issues/2188))
+
 ## [0.27.0] - 2024-01-14
 
 **new: manage remotes**
